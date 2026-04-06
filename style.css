@@ -1,8 +1,17 @@
 body {
     margin: 0;
     font-family: Poppins;
-    background: #0b0b0f;
+    background: #07070c;
     color: white;
+    overflow-x: hidden;
+}
+
+/* PARTICLES */
+#particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 /* SIDEBAR */
@@ -10,36 +19,34 @@ body {
     position: fixed;
     width: 220px;
     height: 100%;
-    background: #111;
+    background: #0f0f14;
     padding: 20px;
+    transition: 0.3s;
 }
 
 .sidebar h2 {
     margin-bottom: 30px;
 }
 
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
 .sidebar li {
+    list-style: none;
     padding: 12px;
     margin: 10px 0;
-    cursor: pointer;
     border-radius: 10px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
 .sidebar li:hover,
 .sidebar .active {
     background: #ff3c3c;
+    box-shadow: 0 0 10px #ff3c3c;
 }
 
 /* MAIN */
 .main {
     margin-left: 240px;
-    padding: 20px;
+    padding: 30px;
 }
 
 /* SECTION */
@@ -52,62 +59,79 @@ body {
     display: block;
 }
 
-/* GRID */
+/* GRID FIXED SIZE */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 25px;
 }
 
-/* BOX */
-.box {
-    background: #15151c;
-    padding: 30px;
+/* CARD SAME SIZE */
+.card {
+    background: #111;
+    padding: 40px 20px;
     border-radius: 15px;
     text-align: center;
     cursor: pointer;
     transition: 0.3s;
+    font-size: 18px;
 }
 
-.box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px #ff3c3c;
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px cyan;
 }
 
 /* PRODUCT */
 .product {
-    background: #15151c;
+    background: #111;
     padding: 30px;
     border-radius: 20px;
-    text-align: center;
     max-width: 400px;
+    text-align: center;
 }
 
 .product img {
     width: 150px;
 }
 
-/* BUY BUTTON */
-.buy {
+/* BUTTON MODERN */
+button {
     padding: 12px 25px;
-    background: #ff3c3c;
     border: none;
     border-radius: 8px;
+    background: linear-gradient(90deg,#ff3c3c,#ff0000);
     color: white;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.buy:hover {
-    background: #ff0000;
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px #ff3c3c;
+}
+
+/* HOME */
+.home-btns {
+    margin: 30px 0;
+    display: flex;
+    gap: 15px;
+}
+
+.desc {
+    opacity: 0.7;
+}
+
+.policy {
+    margin-top: 40px;
+}
+
+.email {
+    color: #ff3c3c;
 }
 
 /* ANIMATION */
 @keyframes fade {
     from {opacity: 0; transform: translateY(10px);}
     to {opacity: 1;}
-}
-
-.email {
-    color: #ff3c3c;
 }
