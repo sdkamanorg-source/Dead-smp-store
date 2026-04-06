@@ -10,16 +10,14 @@
 </head>
 <body>
 
-<canvas id="particles"></canvas>
-
 <!-- SIDEBAR -->
 <div class="sidebar">
     <h2>DeadlyMC</h2>
     <ul>
-        <li onclick="showSection('home')" class="active">🏠 Home</li>
-        <li onclick="showSection('ranks')">💎 Ranks</li>
-        <li onclick="showSection('kits')">⚔ Kits</li>
-        <li onclick="showSection('crates')">🎁 Crates</li>
+        <li onclick="showSection('home', this)" class="active">🏠 Home</li>
+        <li onclick="showSection('rank', this)">💎 Rank</li>
+        <li onclick="showSection('kit', this)">⚔ Kit</li>
+        <li onclick="showSection('crate', this)">🎁 Crate</li>
     </ul>
 </div>
 
@@ -32,8 +30,8 @@
     <p class="desc">Upgrade your gameplay with premium ranks, kits & crates.</p>
 
     <div class="home-btns">
-        <button onclick="showSection('kits')">GO TO KITS</button>
-        <button onclick="showSection('ranks')">VIEW RANKS</button>
+        <button onclick="showSection('kit', this)">Kit</button>
+        <button onclick="showSection('rank', this)">Rank</button>
     </div>
 
     <div class="policy">
@@ -44,20 +42,22 @@
     </div>
 </div>
 
-<!-- COMMON GRID -->
-<div id="ranks" class="section grid">
+<!-- RANK -->
+<div id="rank" class="section grid">
     <div class="card" onclick="openProduct('Deadly Rank','₹379')">Deadly Rank</div>
     <div class="card" onclick="openProduct('Titan Rank','₹279')">Titan Rank</div>
     <div class="card" onclick="openProduct('Deadly+ Rank','₹699')">Deadly+ Rank</div>
 </div>
 
-<div id="kits" class="section grid">
+<!-- KIT -->
+<div id="kit" class="section grid">
     <div class="card" onclick="openProduct('Starter Kit','₹99')">Starter Kit</div>
     <div class="card" onclick="openProduct('Pro Kit','₹199')">Pro Kit</div>
     <div class="card" onclick="openProduct('God Kit','₹299')">God Kit</div>
 </div>
 
-<div id="crates" class="section grid">
+<!-- CRATE -->
+<div id="crate" class="section grid">
     <div class="card" onclick="openProduct('Epic Crate','₹39')">Epic Crate</div>
     <div class="card" onclick="openProduct('King Crate','₹69')">King Crate</div>
     <div class="card" onclick="openProduct('Cosmic Crate','₹119')">Cosmic Crate</div>
@@ -66,10 +66,9 @@
 <!-- PRODUCT -->
 <div id="product" class="section">
     <div class="product">
-        <img src="https://i.imgur.com/6RLpGQh.png">
         <h2 id="pname"></h2>
         <p id="pprice"></p>
-        <button class="buy">BUY NOW</button>
+        <button class="buy">Buy</button>
     </div>
 </div>
 
