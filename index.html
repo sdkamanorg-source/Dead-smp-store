@@ -1,78 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DeadlyMC Store</title>
-
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>DeadlyMC Store</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- SIDEBAR -->
-<div class="sidebar">
-    <h2>DeadlyMC</h2>
-    <ul>
-        <li onclick="showSection('home', this)" class="active">🏠 Home</li>
-        <li onclick="showSection('rank', this)">💎 Rank</li>
-        <li onclick="showSection('kit', this)">⚔ Kit</li>
-        <li onclick="showSection('crate', this)">🎁 Crate</li>
-    </ul>
-</div>
+<!-- NAVBAR -->
+<header>
+  <h1>🔥 DeadlyMC</h1>
+  <nav>
+    <a href="#ranks">Ranks</a>
+    <a href="#keys">Keys</a>
+  </nav>
+</header>
 
-<!-- MAIN -->
-<div class="main">
+<!-- HERO -->
+<section class="hero">
+  <h2>Welcome to DeadlyMC Store</h2>
+  <p>Buy Exclusive Ranks & Crate Keys</p>
+  <button onclick="scrollToSection('ranks')">Shop Now</button>
+</section>
 
-<!-- HOME -->
-<div id="home" class="section active">
-    <h1>Welcome to DeadlyMC</h1>
-    <p class="desc">Upgrade your gameplay with premium ranks, kits & crates.</p>
+<!-- RANKS -->
+<section id="ranks">
+  <h2>💎 Ranks</h2>
+  <div class="card-container">
 
-    <div class="home-btns">
-        <button onclick="showSection('kit', this)">Kit</button>
-        <button onclick="showSection('rank', this)">Rank</button>
+    <div class="card">
+      <h3>Eternal</h3>
+      <p>₹149/month</p>
+      <button onclick="buy('Eternal Rank')">Buy Now</button>
     </div>
 
-    <div class="policy">
-        <h2>Refund Policy</h2>
-        <p>All payments are final. Chargeback = permanent ban.</p>
-        <p>Delivery time: 1–20 minutes.</p>
-        <p class="email">support@deadlymc.fun</p>
+    <div class="card">
+      <h3>Titan</h3>
+      <p>₹279/month</p>
+      <button onclick="buy('Titan Rank')">Buy Now</button>
     </div>
-</div>
 
-<!-- RANK -->
-<div id="rank" class="section grid">
-    <div class="card" onclick="openProduct('Deadly Rank','₹379')">Deadly Rank</div>
-    <div class="card" onclick="openProduct('Titan Rank','₹279')">Titan Rank</div>
-    <div class="card" onclick="openProduct('Deadly+ Rank','₹699')">Deadly+ Rank</div>
-</div>
-
-<!-- KIT -->
-<div id="kit" class="section grid">
-    <div class="card" onclick="openProduct('Starter Kit','₹99')">Starter Kit</div>
-    <div class="card" onclick="openProduct('Pro Kit','₹199')">Pro Kit</div>
-    <div class="card" onclick="openProduct('God Kit','₹299')">God Kit</div>
-</div>
-
-<!-- CRATE -->
-<div id="crate" class="section grid">
-    <div class="card" onclick="openProduct('Epic Crate','₹39')">Epic Crate</div>
-    <div class="card" onclick="openProduct('King Crate','₹69')">King Crate</div>
-    <div class="card" onclick="openProduct('Cosmic Crate','₹119')">Cosmic Crate</div>
-</div>
-
-<!-- PRODUCT -->
-<div id="product" class="section">
-    <div class="product">
-        <h2 id="pname"></h2>
-        <p id="pprice"></p>
-        <button class="buy">Buy</button>
+    <div class="card">
+      <h3>Deadly</h3>
+      <p>₹379/month</p>
+      <button onclick="buy('Deadly Rank')">Buy Now</button>
     </div>
-</div>
 
-</div>
+    <div class="card highlight">
+      <h3>Deadly+</h3>
+      <p>₹699/month</p>
+      <button onclick="buy('Deadly+ Rank')">Buy Now</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- KEYS -->
+<section id="keys">
+  <h2>🔑 Crate Keys</h2>
+  <div class="card-container">
+
+    <div class="card">
+      <h3>Epic Key</h3>
+      <p>₹39</p>
+      <button onclick="buy('Epic Key')">Buy Now</button>
+    </div>
+
+    <div class="card">
+      <h3>Muffin Key</h3>
+      <p>₹49</p>
+      <button onclick="buy('Muffin Key')">Buy Now</button>
+    </div>
+
+    <div class="card">
+      <h3>Cosmic Key</h3>
+      <p>₹69</p>
+      <button onclick="buy('Cosmic Key')">Buy Now</button>
+    </div>
+
+    <div class="card">
+      <h3>Crimson Key</h3>
+      <p>₹119</p>
+      <button onclick="buy('Crimson Key')">Buy Now</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 DeadlyMC Server</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
