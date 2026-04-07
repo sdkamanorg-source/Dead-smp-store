@@ -1,13 +1,12 @@
-function showSection(id, el) {
-    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
+function buy(item) {
+  alert("You selected: " + item);
 
-    document.querySelectorAll('.sidebar li').forEach(li => li.classList.remove('active'));
-    if(el) el.classList.add('active');
+  // 🔥 Replace this with your payment link
+  window.open("https://your-payment-link.com", "_blank");
 }
 
-function openProduct(name, price) {
-    showSection('product');
-    document.getElementById('pname').innerText = name;
-    document.getElementById('pprice').innerText = price;
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({
+    behavior: "smooth"
+  });
 }
