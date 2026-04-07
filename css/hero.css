@@ -1,0 +1,19 @@
+.hero {
+  background: url('../assets/hero-bg.jpg') center/cover;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h2 {
+  font-size: 50px;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: red;
+  border: none;
+}
